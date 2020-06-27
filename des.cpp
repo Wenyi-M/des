@@ -109,7 +109,7 @@ int des_turn(HBlock & left , HBlock & right , const Code & subkey)
 		col[0] = code[6 * i + 1] ;//获取列标
 		col[1] = code[6 * i + 2] ;
 		col[2] = code[6 * i + 3] ;
-		col[4] = code[6 * i + 4] ;
+		col[3] = code[6 * i + 4] ;
 		std::bitset<4> temp(sbox[i][row.to_ulong() * 16 + col.to_ulong()]) ;
 		for(size_t j = 0 ; j < temp.size() ; ++j)
 			code[4 * i + j] = temp[j] ;//将32位暂存于48位中
